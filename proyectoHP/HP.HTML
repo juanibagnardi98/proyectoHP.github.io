@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POINTS FOR SPELLS</title>
+<script defer src="./jib/MAIN.JS"></script>
+</head>
+<body>
+    <style>
+body{
+text-align:center;
+background-image:url(./ESCUDO.JPG);
+background-repeat:repeat;
+}
+
+/*estilo de preguntas*/
+h1,p{
+background-color: rgb(231, 234, 240);
+color: black;
+font-size: 28px;
+padding: 10px;
+margin: 20px auto;
+width: 80%;
+}
+
+/*BOTONES CENTRADOS*/
+button{
+display:block;
+margin:15px auto;
+padding:15px 40px;
+font-size:22px;
+background-color:rgb(60,60,60);
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background-color:rgb(120,120,120);
+}
+
+/*BARRA DE PROGRESO*/
+#contenedorBarra{
+width:80%;
+height:30px;
+background-color:gray;
+margin:20px auto;
+border-radius:10px;
+}
+
+#barra{
+width:0%;
+height:30px;
+background-color:green;
+border-radius:10px;
+transition:width 0.5s, background-color 0.5s;
+}
+</style>
+
+<h1 style="font-size: 2.4rem;">BIENVENIDOS AL MUNDO MAGICO DE HARRY POTTER</h1>
+<p style="font-size: 2.5rem;">DESCUBRE CUANTO SABES SOBRE EL MUNDO MAGICO</p>
+
+<p>PUNTOS: <span id="puntos">0</span></p>
+
+BARRA
+<div id="contenedorBarra">
+    <div id="barra"></div>
+</div>
+
+<P>1- ¿CUAL ES EL CONTRA HECHIZO DE LUMOS EN HARRY POTTER?</P>
+
+<button onclick="verificarRespuesta('a', 1)">a) NOX</button>
+<button onclick="verificarRespuesta('b', 1)">b) REPARO</button>
+<button onclick="verificarRespuesta('c', 1)">c) OSCURUS</button>
+<div id="resultado1" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>2- ¿DONDE ENTRO HARRY POTTER, LA PRIMERA VEZ, PARA IR AL CALLEJON DIAGON?</P>
+
+<button onclick="verificarRespuesta('a', 2)">a) HOWARDS</button>
+<button onclick="verificarRespuesta('b', 2)">b) ZONKOS</button>
+<button onclick="verificarRespuesta('c', 2)">c) El CALDERO CHORREANTE</button>
+<div id="resultado2" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<p>3- ¿COMO SE LLAMA EL PADRINO DE HARRY POTTER?</p>
+
+<button onclick="verificarRespuesta('a', 3)">a) TOM MARVOLORIDDLE</button>
+<button onclick="verificarRespuesta('b', 3)">b) SIRIUS BLACK</button>
+<button onclick="verificarRespuesta('c', 3)">c) ALBUS PERCIVAL WULFRIC BRIAN DUMBLEDORE</button>
+<div id="resultado3" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<p>4- ¿COMO SE LLAMA EL ANIMAL MAGICO QUE HARRY MONTA EN LA 3ERA PELICULA?</p>
+
+<button onclick="verificarRespuesta('a', 4)">a) ARAGON</button>
+<button onclick="verificarRespuesta('b', 4)">b) FAWKES</button>
+<button onclick="verificarRespuesta('c', 4)">c) BUCKBEAK</button>
+<div id="resultado4" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<p>5- ¿CUANTOS HERMANOS TIENE RON WEASLEY?</p>
+
+<button onclick="verificarRespuesta('a', 5)">a) 7</button>
+<button onclick="verificarRespuesta('b', 5)">b) 6</button>
+<button onclick="verificarRespuesta('c', 5)">c) 5</button>
+<div id="resultado5" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>6- ¿QUE POSICION WOOD LE MENCIONA A HARRY EN LA QUE PODRIA TENER TALENTO EN QUIDDITCH?</P>
+
+<button onclick="verificarRespuesta('a', 6)">a)CAZADOR</button>
+<button onclick="verificarRespuesta('b', 6)">b)GOLPEADOR</button>
+<button onclick="verificarRespuesta('c', 6)">c)BUSCADOR</button>
+<div id="resultado6" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>7- ¿A QUIEN LE REGALA HARRY POTTER EL PREMIO DEL TORNEO DE LOS 3 MAGOS?</P>
+
+<button onclick="verificarRespuesta('a', 7)">a)FRED Y GEORGE WEASLEY</button>
+<button onclick="verificarRespuesta('b', 7)">b)RON WEASLEY</button>
+<button onclick="verificarRespuesta('c', 7)">c)AMOS DIGGORY</button>
+<div id="resultado7" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>8- ¿CUAL ES EL HECHIZO DEL QUE SE ENORGULLECIA GILDEROY LOCKHART?</P>
+
+<button onclick="verificarRespuesta('a', 8)">a) DESMAIUS</button>
+<button onclick="verificarRespuesta('b', 8)">b) ALOHOMORA</button>
+<button onclick="verificarRespuesta('c', 8)">c) OBLIVIATE</button>
+<div id="resultado8" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>9- ¿EN QUE LIBRO HARRY POTTER APRENDE EL SECTUMSEMPRA?</P>
+
+<button onclick="verificarRespuesta('a', 9)">a) EL LIBRO REGLAMENTARIO DE HECHIZOS</button>
+<button onclick="verificarRespuesta('b', 9)">b) EL LIBRO DE POCIONES AVANZADAS</button>
+<button onclick="verificarRespuesta('c', 9)">c) EN EL LIBRO DEL PRINCIPE MESTIZO</button>
+<div id="resultado9" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+<P>10- ¿QUIEN TENIA LA COPA DE HELGA HUFFELPUFF ANTES DE LORD VOLDEMORT?</P>
+
+<button onclick="verificarRespuesta('a', 10)">a) SMITH HEPZIBAH</button>
+<button onclick="verificarRespuesta('b', 10)">b) BELLATRIX LESTRANGE</button>
+<button onclick="verificarRespuesta('c', 10)">c) LUCIUS MALFOY</button>
+<div id="resultado10" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+
+RESULTADO
+<p id="resultadoFinal" style="font-size:30px;"></p>
+
+</body>
+</html>
