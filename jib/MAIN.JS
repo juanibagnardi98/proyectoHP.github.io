@@ -83,7 +83,7 @@ function verificarRespuesta(opcion, pregunta) {
     //PREGUNTA 6
     if (pregunta === 6) {
         if (opcion === 'b') {
-            resultado.textContent = "CORRECTO,WOOD SE LO MENCIONA EM LA PIEDRA FILOSOFAL, GANAS 50 PUNTOS";
+            resultado.textContent = "CORRECTO,WOOD SE LO MENCIONA EN LA PIEDRA FILOSOFAL, GANAS 50 PUNTOS";
             resultado.style.color = "yellow";
             cambio = 50;
         } else {
