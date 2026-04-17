@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "install dependencies",
+			"type": "shell",
+			"command": "npm install"
+		},
+		{
+			"label": "build-css",
+			"type": "shell",
+			"command": "npm run build-css"
+		}
+	]
+}
