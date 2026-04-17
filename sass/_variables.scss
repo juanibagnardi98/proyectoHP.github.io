@@ -1,0 +1,36 @@
+// Variables para la identidad de Harry Potter
+$primary-color: #740001; // Rojo Gryffindor
+$secondary-color: #FFD700; // Dorado
+$accent-color: #000000; // Negro
+$background-color: #F5F5F5; // Gris claro
+$text-color: #333333;
+$font-family: 'Arial', sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@mixin responsive-text($size) {
+  font-size: $size;
+
+  @media (max-width: 768px) {
+    font-size: $size * 0.8;
+  }
+}
