@@ -1,0 +1,56 @@
+.btn {
+  @include button-style;
+}
+
+.hero {
+  background-image: url('../ESCUDO.JPG');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeIn 2s ease-in;
+
+  h1 {
+    @include responsive-text(3rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    @include responsive-text(1.5rem);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    color: $primary-color;
+  }
+}
+
+.quiz-section {
+  // Estilos específicos para el quiz
+  .resultado {
+    animation: scaleUp 0.3s ease;
+  }
+
+  @keyframes scaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+  }
+}
