@@ -2,19 +2,17 @@
   "name": "jib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "MAIN.JS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass ../sass/main.scss ../css/styles.css",
+    "watch-css": "sass ../sass/main.scss ../css/styles.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "express": "^5.2.1",
-    "host": "^0.0.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "run": "^1.5.0"
+  "devDependencies": {
+    "sass": "^1.77.8"
   }
 }
