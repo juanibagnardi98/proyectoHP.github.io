@@ -1,0 +1,14 @@
+// Importar Bootstrap si se instala localmente, pero por ahora usaremos CDN
+// @import '~bootstrap/scss/bootstrap';
+
+// Variables
+@import 'variables';
+
+// Base
+@import 'base';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components';
