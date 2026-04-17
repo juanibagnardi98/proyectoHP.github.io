@@ -6,16 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>POINTS FOR SPELLS</title>
 <script defer src="./jib/MAIN.JS"></script>
-</head>
-<body>
-    <style>
+
+<style>
 body{
 text-align:center;
 background-image:url(./ESCUDO.JPG);
 background-repeat:repeat;
+font-family: Arial, sans-serif;
 }
 
-/*estilo de preguntas*/
+
+header{
+margin-top:20px;
+}
+
+
 h1,p{
 background-color: rgb(231, 234, 240);
 color: black;
@@ -25,7 +30,7 @@ margin: 20px auto;
 width: 80%;
 }
 
-/*BOTONES CENTRADOS*/
+
 button{
 display:block;
 margin:15px auto;
@@ -35,13 +40,14 @@ background-color:rgb(60,60,60);
 color:white;
 border-radius:10px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background-color:rgb(120,120,120);
 }
 
-/*BARRA DE PROGRESO*/
+
 #contenedorBarra{
 width:80%;
 height:30px;
@@ -57,90 +63,132 @@ background-color:green;
 border-radius:10px;
 transition:width 0.5s, background-color 0.5s;
 }
+
+
+.resultado{
+color: rgb(245,245,243);
+font-size:30px;
+margin-top:20px;
+}
+
+
+footer{
+margin-top:40px;
+color:white;
+}
 </style>
 
+</head>
+
+<body>
+
+<header>
 <h1 style="font-size: 2.4rem;">BIENVENIDOS AL MUNDO MAGICO DE HARRY POTTER</h1>
 <p style="font-size: 2.5rem;">DESCUBRE CUANTO SABES SOBRE EL MUNDO MAGICO</p>
+</header>
 
+<main>
+
+<section>
 <p>PUNTOS: <span id="puntos">0</span></p>
+</section>
 
-BARRA
+<section>
+<p><strong>BARRA DE PROGRESO</strong></p>
 <div id="contenedorBarra">
     <div id="barra"></div>
 </div>
+</section>
 
+<section>
 <P>1- ¿CUAL ES EL CONTRA HECHIZO DE LUMOS EN HARRY POTTER?</P>
-
 <button onclick="verificarRespuesta('a', 1)">a) NOX</button>
 <button onclick="verificarRespuesta('b', 1)">b) REPARO</button>
 <button onclick="verificarRespuesta('c', 1)">c) OSCURUS</button>
-<div id="resultado1" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado1" class="resultado"></div>
+</section>
 
+<section>
 <P>2- ¿DONDE ENTRO HARRY POTTER, LA PRIMERA VEZ, PARA IR AL CALLEJON DIAGON?</P>
-
 <button onclick="verificarRespuesta('a', 2)">a) HOGWARTS</button>
 <button onclick="verificarRespuesta('b', 2)">b) ZONKOS</button>
 <button onclick="verificarRespuesta('c', 2)">c) El CALDERO CHORREANTE</button>
-<div id="resultado2" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado2" class="resultado"></div>
+</section>
 
+<section>
 <p>3- ¿COMO SE LLAMA EL PADRINO DE HARRY POTTER?</p>
-
 <button onclick="verificarRespuesta('a', 3)">a) TOM MARVOLO RIDDLE</button>
 <button onclick="verificarRespuesta('b', 3)">b) SIRIUS BLACK</button>
 <button onclick="verificarRespuesta('c', 3)">c) ALBUS PERCIVAL WULFRIC BRIAN DUMBLEDORE</button>
-<div id="resultado3" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado3" class="resultado"></div>
+</section>
 
+<section>
 <p>4- ¿COMO SE LLAMA EL ANIMAL MAGICO QUE HARRY MONTA EN LA 3ERA PELICULA?</p>
-
 <button onclick="verificarRespuesta('a', 4)">a) ARAGOG</button>
 <button onclick="verificarRespuesta('b', 4)">b) FAWKES</button>
 <button onclick="verificarRespuesta('c', 4)">c) BUCKBEAK</button>
-<div id="resultado4" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado4" class="resultado"></div>
+</section>
 
+<section>
 <p>5- ¿CUANTOS HERMANOS TIENE RON WEASLEY?</p>
-
 <button onclick="verificarRespuesta('a', 5)">a) 7</button>
 <button onclick="verificarRespuesta('b', 5)">b) 6</button>
 <button onclick="verificarRespuesta('c', 5)">c) 5</button>
-<div id="resultado5" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado5" class="resultado"></div>
+</section>
 
+<section>
 <P>6- ¿QUE POSICION WOOD LE MENCIONA A HARRY EN LA QUE PODRIA TENER TALENTO EN QUIDDITCH?</P>
-
 <button onclick="verificarRespuesta('a', 6)">a)CAZADOR</button>
 <button onclick="verificarRespuesta('b', 6)">b)GOLPEADOR</button>
 <button onclick="verificarRespuesta('c', 6)">c)BUSCADOR</button>
-<div id="resultado6" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado6" class="resultado"></div>
+</section>
 
+<section>
 <P>7- ¿A QUIEN LE REGALA HARRY POTTER EL PREMIO DEL TORNEO DE LOS 3 MAGOS?</P>
-
 <button onclick="verificarRespuesta('a', 7)">a)FRED Y GEORGE WEASLEY</button>
 <button onclick="verificarRespuesta('b', 7)">b)RON WEASLEY</button>
 <button onclick="verificarRespuesta('c', 7)">c)AMOS DIGGORY</button>
-<div id="resultado7" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado7" class="resultado"></div>
+</section>
 
+<section>
 <P>8- ¿CUAL ES EL HECHIZO DEL QUE SE ENORGULLECIA GILDEROY LOCKHART?</P>
-
 <button onclick="verificarRespuesta('a', 8)">a) DESMAIUS</button>
 <button onclick="verificarRespuesta('b', 8)">b) ALOHOMORA</button>
 <button onclick="verificarRespuesta('c', 8)">c) OBLIVIATE</button>
-<div id="resultado8" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado8" class="resultado"></div>
+</section>
 
+<section>
 <P>9- ¿EN QUE LIBRO HARRY POTTER APRENDE EL SECTUMSEMPRA?</P>
-
 <button onclick="verificarRespuesta('a', 9)">a) EL LIBRO REGLAMENTARIO DE HECHIZOS</button>
 <button onclick="verificarRespuesta('b', 9)">b) EL LIBRO DE POCIONES AVANZADAS</button>
 <button onclick="verificarRespuesta('c', 9)">c) EN EL LIBRO DEL PRINCIPE MESTIZO</button>
-<div id="resultado9" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado9" class="resultado"></div>
+</section>
 
+<section>
 <P>10- ¿QUIEN TENIA LA COPA DE HELGA HUFFELPUFF ANTES DE LORD VOLDEMORT?</P>
-
 <button onclick="verificarRespuesta('a', 10)">a) SMITH HEPZIBAH</button>
 <button onclick="verificarRespuesta('b', 10)">b) BELLATRIX LESTRANGE</button>
 <button onclick="verificarRespuesta('c', 10)">c) LUCIUS MALFOY</button>
-<div id="resultado10" style="color: rgb(245,245,243); font-size:30px; margin-top:20px;"></div>
+<div id="resultado10" class="resultado"></div>
+</section>
 
-RESULTADO
-<p id="resultadoFinal" style="font-size:30px;"></p>
+<section>
+<p id="resultadoFinal" style="font-size:30px;"><strong>RESULTADO FINAL</strong></p>
+</section>
+
+</main>
+
+<footer>
+<p>2026 Portal Mágico - Proyecto Web</p>
+</footer>
 
 </body>
 </html>
