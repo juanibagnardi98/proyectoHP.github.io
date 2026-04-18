@@ -83,8 +83,8 @@ function verificarRespuesta(opcion, pregunta) {
         break;
 
         case 6:
-            if (opcion === 'c') {
-                resultado.textContent = "CORRECTO, ES BUSCADOR, GANAS 50 PUNTOS";
+            if (opcion === 'b') {
+                resultado.textContent = "CORRECTO, LE DIJO QUE TENIA TALENTO COMO GOLPEADOR, GANAS 50 PUNTOS";
                 resultado.style.color = "yellow";
                 cambio = 50;
             } else {
